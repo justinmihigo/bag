@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Tw cen MT;
+}
+body{
+    background-color: rgba(186, 33, 33, 0.308);
+}
+#container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.todo-header{
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg,blue,purple);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.todo-header h1{
+    padding: 10px;
+    font-size: 3em;
+    letter-spacing: 4px;
+}
+.todo-header h2{
+    font-size: larger;
+    letter-spacing: 2px;
+}
+.todo-body{
+    margin-top: 40px;
+    background: linear-gradient(180deg,blue,purple);
+    min-width: 40%;
+    padding: 20px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 3px 1px grey;
+}
+input{
+    width: 300px;
+    height: 30px;
+    border-radius: 20px;
+    outline: none;
+    border-color: transparent;
+    text-indent:20px;
+}
+input::placeholder{
+    padding-left: 15px;
+    font-size: medium;
+}
+.input button{
+    width: 70px;
+    height: 35px;
+    margin-left: 10px;
+    font-size: medium;
+    border-radius: 20px;
+    border-color: transparent;
+    background-color: rgb(46, 3, 46);
+    color: white;
+}
+.tasks ul{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    list-style-type: none;
+    font-size: medium;
+}
+.tasks ul li button{
+    width: 60px;
+    height: 25px;
+    border-radius: 10px;
+    border-color: transparent;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.tasks ul li{
+    display: grid;
+    grid-template-columns:3fr 1fr 1fr;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.tasks ul li  p{
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.complete{
+    opacity: 0.8;
+    color: grey;
+    text-decoration: line-through;
+}
+#status{
+    color: rgba(203, 183, 183, 0.9);
+    text-align: center;
+}
+@media screen and (max-width: 434px) {
+    body{
+        display:flex;
+        flex-direction: column;
+    }
+    .tasks{
+        width:70%;
+    }
+}
